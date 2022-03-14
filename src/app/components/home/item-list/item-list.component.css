@@ -1,0 +1,16 @@
+.card {
+    border: 0;
+}
+
+.btn-outline-custom {
+    color: #331f15;
+    background-color: transparent;
+    background-image: none;
+    border-color: #331f15;
+}
+
+.btn-outline-custom:hover {
+    color: #FFEED0;
+    background-color: #331f15;
+    border-color: #331f15;
+}

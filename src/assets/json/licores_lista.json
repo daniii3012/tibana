@@ -1,0 +1,40 @@
+{
+    "licores":[
+        {
+            "name":"Vodka smirnoff",
+            "img":"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3502299-1000-1000/5410316942775.jpg?v=637245464491670000",
+            "price":"68.900",
+            "stock":"10"
+        },
+        {
+            "name":"Tequila Jimador",
+            "img":"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3754670-1000-1000/744607006972.jpg?v=637698273759370000",
+            "price":"101.000",
+            "stock":"5"
+        },
+        {
+            "name":"Jagermeister",
+            "img":"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3351500-1000-1000/4067700015419.jpg?v=636772038985000000",
+            "price":"91.900",
+            "stock":"8"
+        },
+        {
+            "name":"Ron Medellín",
+            "img":"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/196391-1000-1000/7702049100620.jpg?v=636233775756200000",
+            "price":"51.900",
+            "stock":"15"
+        },
+        {
+            "name":"Cerveza Heineken lata x6 unidades",
+            "img":"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3678598-1000-1000/7702090052046.jpg?v=637448573949730000",
+            "price":"12.300",
+            "stock":"20"
+        },
+        {
+            "name":"Vino tinto Gato Negro cabernet",
+            "img":"https://jumbocolombiafood.vteximg.com.br/arquivos/ids/3536989-1000-1000/7804300010638.jpg?v=637341419074970000",
+            "price":"44.990",
+            "stock":"20"
+        }
+    ]
+}

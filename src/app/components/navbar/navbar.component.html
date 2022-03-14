@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-custom">
+    <div class="container">
+        <a class="navbar-brand me-5" routerLink="/home">
+            <img src="../../../assets/img/logo.png" alt="" width="159.6" height="47.4">
+            <!--53.2 , 15.8-->
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-5">
+                <li routerLinkActive="active" class="nav-item">
+                    <a class="nav-link" routerLink="/home">Inicio</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-custom" type="submit"><i class="bi-search"></i></button>
+            </form>
+            <ul class="navbar-nav ms-5">
+                <a class="nav-link" routerLink="/cart">
+                    <button type="button" class="btn btn-outline-custom">
+                        <i class="bi-cart2 me-2"></i>Carrito
+                    </button>
+                </a>
+                <a class="nav-link">
+                    <button type="button" class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Iniciar Sesión
+                    </button>
+                </a>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                
+                <div class="login-wrap">
+                    <div class="login-html">
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Iniciar Sesión</label>
+                        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrarse</label>
+                        <div class="login-form">
+                            <div class="sign-in-htm">
+                                <div class="group">
+                                    <label for="user" class="label">Email</label>
+                                    <input id="user" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Contraseña</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="Sign In">
+                                </div>
+                            </div>
+                            <div class="sign-up-htm">
+                                <div class="group">
+                                    <label for="pass" class="label">Nombres</label>
+                                    <input id="pass" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Apellidos</label>
+                                    <input id="pass" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="user" class="label">Email</label>
+                                    <input id="user" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Contraseña</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Repetir contraseña</label>
+                                    <input id="pass" type="password" class="input" data-type="password">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Cedula</label>
+                                    <input id="pass" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <label for="pass" class="label">Direccion de residencia</label>
+                                    <input id="pass" type="text" class="input">
+                                </div>
+                                <div class="group">
+                                    <input type="submit" class="button" value="Sign Up">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
