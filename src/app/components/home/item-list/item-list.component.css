@@ -3,14 +3,14 @@
 }
 
 .btn-outline-custom {
-    color: #331f15;
+    color: #89203B;
     background-color: transparent;
     background-image: none;
-    border-color: #331f15;
+    border-color: #89203B;
 }
 
 .btn-outline-custom:hover {
-    color: #FFEED0;
-    background-color: #331f15;
-    border-color: #331f15;
+    color: #ffffff;
+    background-color: #89203B;
+    border-color: #89203B;
 }

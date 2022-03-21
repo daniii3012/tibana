@@ -41,8 +41,8 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-    background: transparent;
-    color: #eeeeee;
+    background: #ffeed034;
+    color: #fcfcfc;
 }
 
 ::placeholder {

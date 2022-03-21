@@ -8,15 +8,15 @@
 }
 
 .btn-custom {
-    color: #1b1b1b;
+    color: #1d1d1d;
     background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-custom:hover {
-    color: #1b1b1b;
+    color: #2e2e2e;
     background-color: rgba(0, 0, 0, 0.055);
 }
 
 img {
-    border: 1px dashed #1b1b1b;
+    border: 1px dashed #2e2e2e;
 }
