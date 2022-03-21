@@ -1,10 +1,10 @@
 <div class="row">
     <div *ngFor="let item of licores.licores" class="col-4 d-flex align-items-stretch p-0">
-        <div class="card shadow m-2">
+        <div class="card shadow m-3">
             <img src="{{ item.img }}" class="card-img-top" alt="{{ item.name }}">
             <div class="card-body">
                 <h5 class="card-title">{{ item.name }}</h5>
-                <p class="card-text">{{ item.price }}</p>
+                <p class="card-text">$ {{ item.price }}</p>
                 <a href="#" class="btn btn-outline-custom">Agregar</a>
             </div>
         </div>
