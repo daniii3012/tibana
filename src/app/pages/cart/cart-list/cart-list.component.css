@@ -5,3 +5,15 @@
 .table-custom {
     background-color: #ffffff;
 }
+
+.btn-custom {
+    color: #ffffff;
+    background-color: #89203B;
+    border-color: #89203B;
+}
+
+.btn-custom:hover {
+    color: #ffffff;
+    background-color: #611629;
+    border-color: #611629;
+}

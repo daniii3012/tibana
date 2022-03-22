@@ -1,0 +1,27 @@
+.card {
+    border: 0;
+}
+
+.scroll-content {
+    overflow-y: scroll;
+}
+
+.btn-custom {
+    color: #ffffff;
+    background-color: #89203B;
+    border-color: #89203B;
+}
+
+.btn-custom:hover {
+    color: #ffffff;
+    background-color: #611629;
+    border-color: #611629;
+}
+
+.btn-custom:disabled{
+    background-color: #505050;
+}
+
+.text-custom {
+    color: #611629;
+}
