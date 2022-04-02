@@ -1,8 +1,8 @@
 {
     "ordenes": [
         {
-            "id": 1,
-            "consecutivo":"001",
+            "id": 2,
+            "consecutivo":"002",
             "fecha": "2022-04-02T21:15:30.000Z",
             "nombres": "Carlos",
             "apellidos": "Rodriguez",
@@ -36,8 +36,8 @@
             "total":261800
         },
         {
-            "id": 2,
-            "consecutivo":"002",
+            "id": 1,
+            "consecutivo":"001",
             "fecha": "2022-03-22T23:27:30.000Z",
             "nombres": "Mauricio",
             "apellidos": "Ramirez",

@@ -40,7 +40,7 @@
                         {{ item.name }}
                     </div>
                     <div class="col my-auto">
-                        Precio: {{ item.price }}
+                        Precio: {{ item.price | currency }}
                     </div>
                     <div class="col my-auto">
                         Stock: {{ item.stock }}
@@ -144,7 +144,7 @@
                         </h2>
                         <div id="order{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body fs-5 fw-normal">
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Orden
                                     </div>
@@ -160,7 +160,7 @@
                                         {{ order.fecha | date:"dd/MM/yyyy h:mm a" }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Nombres
                                     </div>
@@ -176,7 +176,7 @@
                                         {{ order.apellidos }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Tipo de Documento
                                     </div>
@@ -192,7 +192,7 @@
                                         {{ order.numDocumento }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Correo Electronico
                                     </div>
@@ -208,7 +208,7 @@
                                         {{ order.numTelefonico }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Dirección de Envio
                                     </div>
@@ -224,7 +224,7 @@
                                         {{ order.casaApto }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Barrio
                                     </div>
@@ -240,7 +240,7 @@
                                         {{ order.metodoPago }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Productos
                                     </div>
@@ -266,7 +266,7 @@
                                         {{ order.subtotal | currency }}
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row bg-light">
                                     <div class="col">
                                         Envio
                                     </div>

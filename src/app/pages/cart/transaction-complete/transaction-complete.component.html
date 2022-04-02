@@ -8,4 +8,169 @@
             </ol>
         </nav>
     </div>
+
+    <hr>
+
+    <div class="card shadow m-2">
+        <div class="card-body text-center m-4">
+            <h3 class="card-title fw-bold">¡Compra Exitosa!</h3>
+            <!--<button (click)="show_order()" type="button" class="btn btn-primary">Resumen de la compra</button>-->
+            <button type="button" class="btn btn-primary">Resumen de la compra</button>
+            &nbsp;
+            <button type="button" class="btn btn-secondary" routerLink="/home">Continúa comprando</button>
+        </div>
+        <div *ngIf="ordersToggle" class="card-body mb-4">
+            <div class="accordion" id="accordionExample">
+                <div *ngFor="let order of ordenes.ordenes.slice(0,1)" class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse" attr.data-bs-target="#order{{ order.id }}" aria-expanded="true" aria-controls="collapseOne">
+                            Orden {{ order.consecutivo }}
+                        </button>
+                    </h2>
+                    <div id="order{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body fs-5 fw-normal">
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Orden
+                                </div>
+                                <div class="col">
+                                    #{{ order.consecutivo }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Fecha
+                                </div>
+                                <div class="col">
+                                    {{ order.fecha | date:"dd/MM/yyyy h:mm a" }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Nombres
+                                </div>
+                                <div class="col">
+                                    {{ order.nombres }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Apellidos
+                                </div>
+                                <div class="col">
+                                    {{ order.apellidos }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Tipo de Documento
+                                </div>
+                                <div class="col">
+                                    {{ order.tipoDocumento }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Número de Documento
+                                </div>
+                                <div class="col">
+                                    {{ order.numDocumento }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Correo Electronico
+                                </div>
+                                <div class="col">
+                                    {{ order.email }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Número Telefonico
+                                </div>
+                                <div class="col">
+                                    {{ order.numTelefonico }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Dirección de Envio
+                                </div>
+                                <div class="col">
+                                    {{ order.direccion }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Casa o Apartamento
+                                </div>
+                                <div class="col">
+                                    {{ order.casaApto }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Barrio
+                                </div>
+                                <div class="col">
+                                    {{ order.barrio }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Metodo de Pago
+                                </div>
+                                <div class="col">
+                                    {{ order.metodoPago }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Productos
+                                </div>
+                                <div class="col">
+                                    <div *ngFor="let product of order.productos" class="row">
+                                        <div class="col">
+                                            {{ product.nombre }}
+                                        </div>
+                                        <div class="col">
+                                            {{ product.cantidad }}
+                                        </div>
+                                        <div class="col">
+                                            {{ product.precio | currency }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Subtotal
+                                </div>
+                                <div class="col">
+                                    {{ order.subtotal | currency }}
+                                </div>
+                            </div>
+                            <div class="row bg-light">
+                                <div class="col">
+                                    Envio
+                                </div>
+                                <div class="col">
+                                    {{ order.envio | currency }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    Total
+                                </div>
+                                <div class="col">
+                                    {{ order.total | currency }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

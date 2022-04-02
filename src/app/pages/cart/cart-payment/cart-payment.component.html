@@ -72,7 +72,7 @@
                     <p class="card-text text-muted fs-5">Datos personales</p>
                 </div>
             </div>
-        </div>        
+        </div>
 
         <div class="col-lg-4 col-md-4 col-sm-12 col-12">
             <div *ngIf="shippingAddressToggle" class="card mb-3">
@@ -133,7 +133,21 @@
                         </div>
                     </div>
                     <hr>
-                    <form class="fs-5">
+                    <label class="fs-5">Metodo de pago</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" [checked]="!paymentMethodToggle" (change)="payment_method()">
+                        <label class="form-check-label fs-5" for="flexRadioDefault1">
+                            Efectivo
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" [checked]="paymentMethodToggle" (change)="payment_method()">
+                        <label class="form-check-label fs-5" for="flexRadioDefault2">
+                            Tarjeta de Credito
+                        </label>
+                    </div>
+
+                    <form *ngIf="paymentMethodToggle" class="fs-5">
                         <div class="mb-3 text-start">
                             <label for="nombresPago" class="form-label">Número de tarjeta</label>
                             <input type="text" class="form-control" id="nombresPago" placeholder="">
@@ -196,6 +210,9 @@
                         </div>
                         <button (click)="payment_info()" type="button" class="btn btn-custom fw-bold">Siguiente</button>
                     </form>
+                    <form *ngIf="!paymentMethodToggle" class="fs-5 mt-3">
+                        <button (click)="payment_info()" type="button" class="btn btn-custom fw-bold">Siguiente</button>
+                    </form>
                 </div>
             </div>
             <div *ngIf="!paymentInfoToggle" class="card mb-3">
@@ -222,7 +239,7 @@
                             <tbody>
                                 <tr *ngFor="let item of licores.licores.slice(0,3)">
                                     <th scope="row" class="p-3"><img src="{{ item.img }}" class="me-5" height="75" alt="{{ item.name }}">{{ item.name }}</th>
-                                    <td class="text-center">$ {{ item.price }}</td>
+                                    <td class="text-center">{{ item.price | currency }}</td>
                                 </tr>
                             </tbody>
                         </table>

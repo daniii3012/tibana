@@ -54,7 +54,6 @@ export class AdminComponent implements OnInit {
   show_orders() {
     this.productsToggle = false;
     this.ordersToggle = true;
-    console.log(this.ordenes.ordenes);
   }
 
   reset() {

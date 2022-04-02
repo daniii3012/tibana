@@ -4,7 +4,7 @@
             <img src="{{ item.img }}" class="card-img-top" alt="{{ item.name }}">
             <div class="card-body">
                 <h4 class="card-title">{{ item.name }}</h4>
-                <p class="card-text">$ {{ item.price }}</p>
+                <p class="card-text">{{ item.price | currency }}</p>
                 <a href="#" class="btn btn-outline-custom fw-bold">Agregar Producto</a>
             </div>
         </div>

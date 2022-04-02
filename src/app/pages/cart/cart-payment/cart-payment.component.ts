@@ -13,6 +13,8 @@ export class CartPaymentComponent implements OnInit {
   paymentInfoToggle = false;
   canPayToggle = false;
 
+  paymentMethodToggle = false;
+
   licores: any;
 
   constructor(
@@ -52,6 +54,10 @@ export class CartPaymentComponent implements OnInit {
     this.shippingAddressToggle = false;
     this.paymentInfoToggle = true;
     this.canPayToggle = false;
+  }
+
+  payment_method(){
+    this.paymentMethodToggle = !this.paymentMethodToggle;
   }
 
   payment_info() {
