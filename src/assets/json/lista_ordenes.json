@@ -4,31 +4,31 @@
             "id": 1,
             "consecutivo":"001",
             "fecha": "2022-04-02T15:15:30.000Z",
-            "nombres": "",
-            "apellidos": "",
+            "nombres": "Carlos",
+            "apellidos": "Rodriguez",
             "tipoDocumento": "CC",
             "numDocumento": 1065789426,
             "email": "email@example.com",
             "numTelefonico": 318945215,
-            "direccion": "",
-            "casaApto": "",
-            "barrio": "",
+            "direccion": "Cll 4b #39B-90",
+            "casaApto": "Apartamento 401",
+            "barrio": "Tibana",
             "metodoPago": "Efectivo",
             "productos": [
                 {
-                    "nombre":"",
-                    "cantidad":"",
-                    "precio":""
+                    "nombre":"Jagermeister",
+                    "cantidad":1,
+                    "precio":91900
                 },
                 {
-                    "nombre":"",
-                    "cantidad":"",
-                    "precio":""
+                    "nombre":"Vodka smirnoff",
+                    "cantidad":1,
+                    "precio":68900
                 }
             ],
-            "subtotal":0,
+            "subtotal":160800,
             "envio":0,
-            "total":0
+            "total":160800
         },
         {
             "id": 2,
