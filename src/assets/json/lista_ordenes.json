@@ -1,0 +1,69 @@
+{
+    "ordenes": [
+        {
+            "id": 1,
+            "consecutivo":"001",
+            "fecha": "2022-04-02T15:15:30.000Z",
+            "nombres": "",
+            "apellidos": "",
+            "tipoDocumento": "CC",
+            "numDocumento": 1065789426,
+            "email": "email@example.com",
+            "numTelefonico": 318945215,
+            "direccion": "",
+            "casaApto": "",
+            "barrio": "",
+            "metodoPago": "Efectivo",
+            "productos": [
+                {
+                    "nombre":"",
+                    "cantidad":"",
+                    "precio":""
+                },
+                {
+                    "nombre":"",
+                    "cantidad":"",
+                    "precio":""
+                }
+            ],
+            "subtotal":0,
+            "envio":0,
+            "total":0
+        },
+        {
+            "id": 2,
+            "consecutivo":"002",
+            "fecha": "2022-04-02T18:27:30.000Z",
+            "nombres": "",
+            "apellidos": "",
+            "tipoDocumento": "CC",
+            "numDocumento": 1025654125,
+            "email": "email@example.com",
+            "numTelefonico": 311974215,
+            "direccion": "",
+            "casaApto": "",
+            "barrio": "",
+            "metodoPago": "Tarjeta de Credito",
+            "productos": [
+                {
+                    "nombre":"",
+                    "cantidad":"",
+                    "precio":""
+                },
+                {
+                    "nombre":"",
+                    "cantidad":"",
+                    "precio":""
+                },
+                {
+                    "nombre":"",
+                    "cantidad":"",
+                    "precio":""
+                }
+            ],
+            "subtotal":0,
+            "envio":0,
+            "total":0
+        }
+    ]
+}

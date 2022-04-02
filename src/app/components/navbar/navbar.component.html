@@ -27,7 +27,7 @@
                     </button>
                 </a>
                 <a class="nav-link">
-                    <button type="button" class="btn btn-custom fw-bold" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-custom fw-bold" data-bs-toggle="modal" data-bs-target="#loginModal">
                         Iniciar Sesión
                     </button>
                 </a>
@@ -39,7 +39,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-light">
@@ -115,15 +115,19 @@
                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
                         </div>
                         <div class="mb-3 text-start">
-                            <label for="exampleFormControlInput1" class="form-label">Documento de identidad</label>
-                            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
-                        </div>
-                        <div class="mb-3 text-start">
                             <label for="exampleFormControlInput1" class="form-label">Correo electronico</label>
                             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
                         </div>
                         <div class="mb-3 text-start">
+                            <label for="exampleFormControlInput1" class="form-label">Confirmar Correo electronico</label>
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        </div>
+                        <div class="mb-3 text-start">
                             <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 text-start">
+                            <label for="exampleInputPassword1" class="form-label">Confirmar Contraseña</label>
                             <input type="password" class="form-control" id="exampleInputPassword1">
                         </div>
                         <button type="submit" class="btn btn-lg btn-custom fw-bold mb-4">Registrarse</button>

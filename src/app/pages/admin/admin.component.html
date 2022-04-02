@@ -1,0 +1,293 @@
+<div class="container mt-4">
+    <div class="row justify-content-center mb-4 text-center">
+        <div class="col">
+            <div class="card shadow m-2">
+                <div class="card-body m-4">
+                    <h3 class="card-title fw-bold">Productos</h3>
+                    <div class="card-text">
+                        <button (click)="show_products()" type="button" class="btn btn-primary">Ver Productos</button>
+                        &nbsp;
+                        <button (click)="show_products()" type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addProduct">Añadir Producto</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="card shadow m-2">
+                <div class="card-body m-4">
+                    <h3 class="card-title fw-bold">Ordenes</h3>
+                    <div class="card-text">
+                        <button (click)="show_orders()" type="button" class="btn btn-primary">Ver Ordenes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lista de productos -->
+
+    <div *ngIf="productsToggle" class="card shadow m-2">
+        <div class="card-body text-center">
+            <h3 class="card-title fw-bold mb-5 mt-3">Lista de productos</h3>
+            <div class="card-text">
+                <div *ngFor="let item of licores.licores" class="row justify-content-center">
+                    <hr>
+                    <div class="col my-auto">
+                        <img src="{{ item.img }}" class="img-fluid" style="max-height: 10rem;" alt="{{ item.name }}">
+                    </div>
+                    <div class="col my-auto">
+                        {{ item.name }}
+                    </div>
+                    <div class="col my-auto">
+                        Precio: {{ item.price }}
+                    </div>
+                    <div class="col my-auto">
+                        Stock: {{ item.stock }}
+                    </div>
+                    <div class="col my-auto">
+                        <button type="button" class="btn btn-warning" data-bs-toggle="modal" attr.data-bs-target="#edit{{ item.id }}"><i class="bi-pencil-fill"></i></button>
+                    </div>
+
+                    <!-- Modal para editar un producto -->
+
+                    <div class="modal fade" id="edit{{ item.id }}" tabindex="-1" aria-labelledby="editProduct" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h4 class="modal-title fw-bold" id="editProduct">Editando Producto</h4>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="mb-3 text-start">
+                                        <label for="productName" class="form-label">Nombre del producto</label>
+                                        <input type="text" class="form-control" id="productName" [(ngModel)]="item.name">
+                                    </div>
+                                    <div class="mb-3 text-start">
+                                        <label for="productImg" class="form-label">Imagen</label>
+                                        <input type="text" class="form-control" id="productImg" [(ngModel)]="item.img">
+                                    </div>
+                                    <img src="{{ item.img }}" class="img-fluid" style="max-height: 10rem;" alt="{{ item.name }}">
+                                    <div class="mb-3 text-start">
+                                        <label for="prodcutPrice" class="form-label">Precio</label>
+                                        <input type="number" class="form-control" id="prodcutPrice" [(ngModel)]="item.price">
+                                    </div>
+                                    <div class="mb-3 text-start">
+                                        <label for="productStock" class="form-label">Stock</label>
+                                        <input type="number" class="form-control" id="productStock" [(ngModel)]="item.stock">
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>-->
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar Cambios</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para añadir un nuevo producto -->
+    <div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-bold" id="editProduct">Añadir nuevo producto</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3 text-start">
+                        <label for="productName" class="form-label">Nombre del producto</label>
+                        <input type="text" class="form-control" id="productName" [(ngModel)]="name">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="productImg" class="form-label">Imagen</label>
+                        <input type="text" class="form-control" id="productImg" [(ngModel)]="img">
+                    </div>
+                    <img src="{{ img }}" class="img-fluid" style="max-height: 10rem;" alt="{{ name }}">
+                    <div class="mb-3 text-start">
+                        <label for="prodcutPrice" class="form-label">Precio</label>
+                        <input type="number" class="form-control" id="prodcutPrice" [(ngModel)]="price">
+                    </div>
+                    <div class="mb-3 text-start">
+                        <label for="productStock" class="form-label">Stock</label>
+                        <input type="number" class="form-control" id="productStock" [(ngModel)]="stock">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button (click)="reset()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Lista de ordenes -->
+
+    <div *ngIf="ordersToggle" class="card shadow m-2">
+        <div class="card-body">
+            <h3 class="card-title fw-bold mb-5 mt-3 text-center">Lista de ordenes</h3>
+            <div class="card-text">
+                <div class="accordion" id="accordionExample">
+                    <div *ngFor="let order of ordenes.ordenes" class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed fs-4 fw-bold" type="button" data-bs-toggle="collapse" attr.data-bs-target="#order{{ order.id }}" aria-expanded="true" aria-controls="collapseOne">
+                                Orden {{ order.consecutivo }}
+                            </button>
+                        </h2>
+                        <div id="order{{ order.id }}" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body fs-5 fw-normal">
+                                <div class="row">
+                                    <div class="col">
+                                        Orden
+                                    </div>
+                                    <div class="col">
+                                        #{{ order.consecutivo }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Fecha
+                                    </div>
+                                    <div class="col">
+                                        {{ order.fecha | date:"dd/MM/yyyy h:mm a" }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Nombres
+                                    </div>
+                                    <div class="col">
+                                        {{ order.nombres }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Apellidos
+                                    </div>
+                                    <div class="col">
+                                        {{ order.apellidos }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Tipo de Documento
+                                    </div>
+                                    <div class="col">
+                                        {{ order.tipoDocumento }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Número de Documento
+                                    </div>
+                                    <div class="col">
+                                        {{ order.numDocumento }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Correo Electronico
+                                    </div>
+                                    <div class="col">
+                                        {{ order.email }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Número Telefonico
+                                    </div>
+                                    <div class="col">
+                                        {{ order.numTelefonico }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Dirección de Envio
+                                    </div>
+                                    <div class="col">
+                                        {{ order.direccion }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Casa o Apartamento
+                                    </div>
+                                    <div class="col">
+                                        {{ order.casaApto }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Barrio
+                                    </div>
+                                    <div class="col">
+                                        {{ order.barrio }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Metodo de Pago
+                                    </div>
+                                    <div class="col">
+                                        {{ order.metodoPago }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Productos
+                                    </div>
+                                    <div class="col">
+                                        <div *ngFor="let product of ordenes.ordenes.productos" class="row">
+                                            <div class="col">
+                                                {{ product.nombre }}
+                                            </div>
+                                            <div class="col">
+                                                {{ product.cantidad }}
+                                            </div>
+                                            <div class="col">
+                                                {{ product.precio }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Subtotal
+                                    </div>
+                                    <div class="col">
+                                        {{ order.subtotal }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Envio
+                                    </div>
+                                    <div class="col">
+                                        {{ order.envio }}
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        Total
+                                    </div>
+                                    <div class="col">
+                                        {{ order.total }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -5,6 +5,7 @@ import { CartListComponent } from './pages/cart/cart-list/cart-list.component';
 import { LoginComponent } from './pages/user/login/login.component';
 import { CartPaymentComponent } from './pages/cart/cart-payment/cart-payment.component';
 import { TransactionCompleteComponent } from './pages/cart/transaction-complete/transaction-complete.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'cart', component: CartListComponent },
   { path: 'cart/payment', component: CartPaymentComponent },
   { path: 'purchase', component: TransactionCompleteComponent },
+  { path: 'admin', component: AdminComponent },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

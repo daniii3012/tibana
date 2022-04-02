@@ -3,18 +3,17 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-
 @Injectable({
   providedIn: 'root'
 })
-export class ItemsService {
+export class OrdersService {
 
-  licores = "../../../assets/json/licores_lista.json";
+  ordenes = "../../../assets/json/lista_ordenes.json";
 
   constructor(private http: HttpClient) { }
 
-  getLicores() {
-    return this.http.get(this.licores).pipe(
+  getOrdenes() {
+    return this.http.get(this.ordenes).pipe(
       catchError(this.handleError)
     );
   }
