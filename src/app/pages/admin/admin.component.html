@@ -253,7 +253,7 @@
                                                 {{ product.cantidad }}
                                             </div>
                                             <div class="col">
-                                                {{ product.precio }}
+                                                {{ product.precio | currency }}
                                             </div>
                                         </div>
                                     </div>
@@ -263,7 +263,7 @@
                                         Subtotal
                                     </div>
                                     <div class="col">
-                                        {{ order.subtotal }}
+                                        {{ order.subtotal | currency }}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -271,7 +271,7 @@
                                         Envio
                                     </div>
                                     <div class="col">
-                                        {{ order.envio }}
+                                        {{ order.envio | currency }}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -279,7 +279,7 @@
                                         Total
                                     </div>
                                     <div class="col">
-                                        {{ order.total }}
+                                        {{ order.total | currency }}
                                     </div>
                                 </div>
                             </div>

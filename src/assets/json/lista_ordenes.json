@@ -3,7 +3,7 @@
         {
             "id": 1,
             "consecutivo":"001",
-            "fecha": "2022-04-02T15:15:30.000Z",
+            "fecha": "2022-04-02T21:15:30.000Z",
             "nombres": "Carlos",
             "apellidos": "Rodriguez",
             "tipoDocumento": "CC",
@@ -14,6 +14,41 @@
             "casaApto": "Apartamento 401",
             "barrio": "Tibana",
             "metodoPago": "Efectivo",
+            "productos": [
+                {
+                    "nombre":"Vodka smirnoff",
+                    "cantidad":1,
+                    "precio":68900
+                },
+                {
+                    "nombre":"Tequila Jimador",
+                    "cantidad":1,
+                    "precio":101000
+                },
+                {
+                    "nombre":"Jagermeister",
+                    "cantidad":1,
+                    "precio":91900
+                }
+            ],
+            "subtotal":261800,
+            "envio":0,
+            "total":261800
+        },
+        {
+            "id": 2,
+            "consecutivo":"002",
+            "fecha": "2022-03-22T23:27:30.000Z",
+            "nombres": "Mauricio",
+            "apellidos": "Ramirez",
+            "tipoDocumento": "CC",
+            "numDocumento": 1025654125,
+            "email": "email@example.com",
+            "numTelefonico": 311974215,
+            "direccion": "Cra 43B #4-26",
+            "casaApto": "",
+            "barrio": "Brasilia",
+            "metodoPago": "Tarjeta de Credito",
             "productos": [
                 {
                     "nombre":"Jagermeister",
@@ -29,41 +64,6 @@
             "subtotal":160800,
             "envio":0,
             "total":160800
-        },
-        {
-            "id": 2,
-            "consecutivo":"002",
-            "fecha": "2022-04-02T18:27:30.000Z",
-            "nombres": "",
-            "apellidos": "",
-            "tipoDocumento": "CC",
-            "numDocumento": 1025654125,
-            "email": "email@example.com",
-            "numTelefonico": 311974215,
-            "direccion": "",
-            "casaApto": "",
-            "barrio": "",
-            "metodoPago": "Tarjeta de Credito",
-            "productos": [
-                {
-                    "nombre":"",
-                    "cantidad":"",
-                    "precio":""
-                },
-                {
-                    "nombre":"",
-                    "cantidad":"",
-                    "precio":""
-                },
-                {
-                    "nombre":"",
-                    "cantidad":"",
-                    "precio":""
-                }
-            ],
-            "subtotal":0,
-            "envio":0,
-            "total":0
         }
     ]
 }
